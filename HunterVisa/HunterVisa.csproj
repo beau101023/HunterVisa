@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+    <AssemblyName>HunterVisa</AssemblyName>
+    <Description></Description>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+	  <AssemblyTitle>Hunter Visa</AssemblyTitle>
+	  <Company>Beau</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UnityEngine.Modules" Version="4.6.3" IncludeAssets="compile" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>lib\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="BepInEx">
+		  <HintPath>lib\BepInEx.dll</HintPath>
+		</Reference>
+		<Reference Include="ConfigMachine">
+		  <HintPath>lib\ConfigMachine.dll</HintPath>
+		</Reference>
+		<Reference Include="HOOKS-Assembly-CSharp">
+		  <HintPath>lib\HOOKS-Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Mono.Cecil">
+		  <HintPath>lib\Mono.Cecil.dll</HintPath>
+		</Reference>
+		<Reference Include="MonoMod.RuntimeDetour">
+		  <HintPath>lib\MonoMod.RuntimeDetour.dll</HintPath>
+		</Reference>
+		<Reference Include="MonoMod.Utils">
+		  <HintPath>lib\MonoMod.Utils.dll</HintPath>
+		</Reference>
+		<Reference Include="Partiality">
+		  <HintPath>lib\Partiality.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+</Project>
